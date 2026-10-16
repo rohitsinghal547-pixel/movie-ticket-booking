@@ -1,0 +1,375 @@
+/* =========================================
+   MovieTime — Complete Global Styles
+   File: client/src/index.css
+========================================= */
+
+/* 1. Global reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 320px;
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: #141414;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+/* 2. Navigation bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 20px 5%;
+    background-color: #1e1e1e;
+}
+
+.logo {
+    margin: 0;
+    color: #f84464;
+    font-size: 28px;
+}
+
+.navbar nav,
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.navbar a,
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover,
+.nav-links a:hover {
+    color: #f84464;
+}
+
+/* 3. Homepage hero */
+.hero {
+    padding: 50px 5%;
+    background-color: #202020;
+}
+
+.hero h2 {
+    margin-top: 0;
+    font-size: 36px;
+}
+
+.hero p {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* 4. Movie section and grid */
+.movies-section {
+    padding: 30px 5%;
+}
+
+.movies-section > h2 {
+    margin-bottom: 24px;
+    font-size: 28px;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.movie-card {
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #303030;
+    transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+.movie-info {
+    padding: 16px;
+}
+
+.movie-info h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.movie-info p {
+    color: #cccccc;
+    font-size: 14px;
+}
+
+.movie-info .rating {
+    color: #ffd166;
+    font-weight: bold;
+}
+
+.movie-info button {
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #f84464;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.movie-info button:hover {
+    background-color: #d92d4d;
+}
+
+/* 5. Footer */
+footer {
+    padding: 20px;
+    background-color: #1e1e1e;
+    color: #aaaaaa;
+    text-align: center;
+}
+
+/* 6. Booking reference / confirmation */
+.booking-reference {
+    margin: 24px 0;
+    padding: 20px;
+    border: 1px dashed #16a34a;
+    border-radius: 12px;
+    background: #f0fdf4;
+    text-align: center;
+}
+
+.booking-reference span {
+    display: block;
+    color: #166534;
+    font-size: 14px;
+}
+
+.booking-reference h2 {
+    margin: 10px 0;
+    color: #15803d;
+    font-size: 26px;
+    letter-spacing: 2px;
+    overflow-wrap: anywhere;
+}
+
+.booking-reference p {
+    margin-bottom: 0;
+    color: #166534;
+    font-size: 13px;
+}
+
+/* 7. Authentication pages — login and registration */
+.auth-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 40px 20px;
+    background: #0b1120;
+    color: #f8fafc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 440px;
+    margin: auto;
+    padding: 36px;
+    border: 1px solid #263449;
+    border-radius: 16px;
+    background: #111c2e;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.auth-card h1 {
+    margin: 0 0 12px;
+    color: #f8fafc;
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.auth-card > p {
+    color: #a9b7ca;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.auth-card label {
+    display: block;
+    margin-top: 6px;
+    color: #e2e8f0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.auth-card input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid #35445a;
+    border-radius: 8px;
+    background: #0b1120;
+    color: #f8fafc;
+    font-size: 15px;
+}
+
+.auth-card input::placeholder {
+    color: #94a3b8;
+}
+
+.auth-card input:focus {
+    border-color: #60a5fa;
+    outline: 2px solid #60a5fa;
+    outline-offset: 2px;
+}
+
+.auth-card button {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 13px;
+    border: 0;
+    border-radius: 8px;
+    background: #16a34a;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.auth-card button:hover {
+    background: #15803d;
+}
+
+.auth-card button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.auth-card .auth-error {
+    color: #fca5a5;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.auth-card .auth-switch {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.auth-card a {
+    color: #86efac;
+    text-decoration: none;
+}
+
+.auth-card a:hover {
+    text-decoration: underline;
+}
+
+.auth-card .auth-home-link {
+    display: block;
+    margin-top: 20px;
+    color: #cbd5e1;
+    text-align: center;
+}
+
+.auth-card .auth-home-link:hover {
+    color: #86efac;
+}
+
+/* 8. Responsive layouts */
+@media (max-width: 900px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .navbar nav,
+    .nav-links {
+        gap: 16px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .auth-page {
+        padding: 24px 16px;
+    }
+
+    .auth-card {
+        padding: 26px 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .movie-grid {
+        grid-template-columns: 1fr;
+    }
+}
