@@ -4,9 +4,6 @@ import "./App.css";
 import MovieCard from "./MovieCard";
 import { useAuth } from "./AuthContext.jsx";
 import API_URL from "./api";
-import API_URL from "./api";
-
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 const movieDetails = {
     "Interstellar": {
@@ -223,8 +220,7 @@ function App() {
 
                     <div className="movie-grid">
                         {movies.map((movie) => {
-                            const details = movieDetails[movie.name];
-
+                        const details = movieDetails[movie.name] || {};
                             return (
                                 <MovieCard
                                     key={movie._id}

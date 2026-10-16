@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { useAuth } from "./AuthContext.jsx";
 import API_URL from "./api";
 
-const API_URL = "http://localhost:5000/api";
-
 const EMPTY_FORM = {
     name: "",
     genre: "",
