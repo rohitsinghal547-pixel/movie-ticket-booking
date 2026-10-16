@@ -144,7 +144,7 @@ useEffect(() => {
             });
 
             const response = await fetch(
-                `http://localhost:5000/api/bookings/occupied-seats?${params.toString()}`,
+                `${API_URL}/api/bookings/occupied-seats?${params.toString()}`,
                 {
                     signal: controller.signal
                 }
@@ -577,7 +577,7 @@ const canContinue =
                                 };
                             
                                 const response = await fetch(
-                                    "http://localhost:5000/api/bookings",
+                                    '${API_URL}/api/bookings',
                                     {
                                         method: "POST",
                                         headers: {

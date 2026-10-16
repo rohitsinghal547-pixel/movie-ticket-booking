@@ -27,7 +27,7 @@ function MyBookings() {
                 setError("");
 
                 const response = await fetch(
-                    "http://localhost:5000/api/bookings/my-bookings",
+                    '${API_URL}/api/bookings/my-bookings',
                     {
                         method: "GET",
                         headers: {
@@ -90,7 +90,7 @@ function MyBookings() {
             
                 try {
                   const response = await fetch(
-                    `http://localhost:5000/api/bookings/${bookingId}`,
+                    `${API_URL}/api/bookings/${bookingId}`,
                     {
                       method: "DELETE",
                       headers: {

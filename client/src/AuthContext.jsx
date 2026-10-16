@@ -4,9 +4,11 @@ import {
     useState
 } from "react";
 
+import API_URL from "./api";
+
 const AuthContext = createContext(null);
 
-const API_URL = "http://localhost:5000/api/auth";
+const AUTH_API_URL = '${API_URL}/api/auth';
 
 export function AuthProvider({ children }) {
     const [user, setUser] = useState(() => {
