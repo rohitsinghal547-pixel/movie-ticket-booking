@@ -19,11 +19,12 @@ const authMiddleware = require("./middleware/authMiddleware");
 const adminMiddleware = require("./middleware/adminMiddleware");
 
 // Middleware
-app.use(
-    cors({
-        origin: "http://localhost:5173"
-    })
-);
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://movie-ticket-booking-eight-snowy.vercel.app"
+  ]
+}));
 
 function isValidDate(date) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
