@@ -11,10 +11,6 @@ const User = require("./models/User");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-    console.log(`MovieTime server running on port ${PORT}`);
-});
-
 const authMiddleware = require("./middleware/authMiddleware");
 const adminMiddleware = require("./middleware/adminMiddleware");
 
@@ -758,6 +754,8 @@ async function startServer() {
 
         // Insert sample movies if the collection is empty
         const movieCount = await Movie.countDocuments();
+
+        console.log("Movies currently in database:", movieCount);
 
         if (movieCount === 0) {
             await Movie.insertMany([
