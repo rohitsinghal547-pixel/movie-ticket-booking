@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./App.css";
-
 import API_URL from "./api";
 
 function MyBookings() {
@@ -27,7 +26,7 @@ function MyBookings() {
                 setError("");
 
                 const response = await fetch(
-                    '${API_URL}/api/bookings/my-bookings',
+                    `${API_URL}/api/bookings/my-bookings`,
                     {
                         method: "GET",
                         headers: {
