@@ -8,7 +8,7 @@ import API_URL from "./api";
 
 const AuthContext = createContext(null);
 
-const AUTH_API_URL = '${API_URL}/api/auth';
+const AUTH_API_URL = `${API_URL}/api/auth`;
 
 export function AuthProvider({ children }) {
     const [user, setUser] = useState(() => {
@@ -37,7 +37,7 @@ export function AuthProvider({ children }) {
     }
 
     async function sendAuthRequest(endpoint, credentials) {
-        const response = await fetch(`${API_URL}/${endpoint}`, {
+        const response = await fetch(`${AUTH_API_URL}/${endpoint}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
